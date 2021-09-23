@@ -7,8 +7,8 @@ from setuptools import setup, find_namespace_packages
 
 REQUIREMENTS = [
     "numpy",
-    "matplotlib",
-    "retworkx",
+    "matplotlib>=3.3.0",
+    "retworkx>=0.10.0",
     "qiskit",
     "tqdm",
     "pydot",
@@ -38,7 +38,7 @@ setup(
     author="Shantanu Jha",
     author_email="shantanu.rajesh.jha@gmail.com",
     license="Apache 2.0",
-    packages=find_namespace_packages(exclude=["test*"]),
+    packages=find_namespace_packages(exclude=["test*", "tutorials*", "data*"]),
     install_requires=REQUIREMENTS,
     classifiers=[
         "Environment :: Console",
@@ -46,7 +46,7 @@ setup(
         "Intended Audience :: Developers",
         "Intended Audience :: Science/Research",
         "Operating System :: Microsoft :: Windows",
-        "Operating System :: MacOS",
+        "Operating System :: MacOS :: MacOS X",
         "Operating System :: POSIX :: Linux",
         "Programming Language :: Python :: 3 :: Only",
         "Programming Language :: Python :: 3.6",
@@ -54,7 +54,7 @@ setup(
         "Programming Language :: Python :: 3.8",
         "Topic :: Scientific/Engineering",
     ],
-    keywords="qiskit topological codes qec quantum error correction",
+    keywords="qiskit topological surface codes qec quantum error correction",
     python_requires=">=3.6",
     project_urls={
         "Bug Tracker": "https://github.com/yaleqc/qtcodes/issues",
